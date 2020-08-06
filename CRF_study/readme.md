@@ -279,25 +279,25 @@ $$
 
 将转移特征和状态特征及其权值用统一的符号表示，设有k1个转移特征，$k_2$个状态特征，$K=k_1+k_2$,记
 
- <img src="img/简化形式1.png" width = "500" height = "200" alt="图片名称" align=center />
+ ![路径](img/简化形式1.png)
 
 ###### step 2
 
 对转移与状态特征在各个位置i求和，记作
 
- <img src="img/简化形式2.png" width = "400" height = "200" alt="图片名称" align=center />
+ ![路径](img/简化形式2.png)
 
 ###### step 3
 
 将 $\lambda_{x}$ 和 $\mu_{l}$ 用统一的权重表示，记作
 
- <img src="img/简化形式3.png" width = "300" height = "200" alt="图片名称" align=center />
+ ![路径](img/简化形式3.png)
 
 ###### step 4
 
 转化后的条件随机场可表示为：
 
- <img src="img/简化形式4.png" width = "250" height = "200" alt="图片名称" align=center />
+ ![路径](img/简化形式4.png)
 
 ###### step 5
 
@@ -309,11 +309,11 @@ $$
 
 以 $F(y,x)$ 表示特征向量，即
 
- <img src="img/简化形式5.png" width = "350" height = "200" alt="图片名称" align=center />
+ ![路径](img/简化形式5.png)
 
 则，条件随机场写成内积形式为：
 
- <img src="img/简化形式6.png" width = "200" height = "200" alt="图片名称" align=center />
+  ![路径](img/简化形式6.png)
 
 #### 基本问题
 
@@ -343,15 +343,15 @@ $$
 
 对观测序列 $x$ 的每个位置 $i=1,2,...,n+1$ ，定义一个 $m$ 阶矩阵（$m$ 为标记$Y_i$取值的个数）
 
- <img src="img/前向后向10.png" width = "350" height = "200" alt="图片名称" align=center />
+ ![路径](img/前向后向10.png)
 
 对每个指标 $i=0,1,...,n+1$，定义前向向量 $\alpha_{i}(x)$，则递推公式:
 
- <img src="img/前向后向1.png" width = "450" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向1.png)
 
 其中，
 
- <img src="img/前向后向2.png" width = "250" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向2.png)
  
  
 
@@ -359,36 +359,36 @@ $$
 
 对每个指标 $i=0,1,...,n+1$，定义前向向量 $\beta_{i}(x)$，则递推公式:
 
-<img src="img/前向后向3.png" width = "350" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向3.png)
  
-<img src="img/前向后向4.png" width = "350" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向4.png)
 
 
 ###### step 3
 
- <img src="img/前向后向5.png" width = "250" height = "200" alt="图片名称" align=center />
+ ![路径](img/前向后向5.png)
 
 ###### step 4 概率计算
 
 所以，标注序列在位置 $i$ 是标注 $y_i$ 的条件概率为：
 
-<img src="img/前向后向6.png" width = "350" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向6.png)
  
-<img src="img/前向后向7.png" width = "500" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向7.png)
 
 其中，
 
-<img src="img/前向后向8.png" width = "150" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向8.png)
 
 ###### step 5 期望值计算
 
 通过利用前向-后向向量，计算特征函数关于联合概率分布 $P(X,Y)$ 和 条件概率分布 $P(Y|X)$ 的数学期望，即特征函数 $f_k$ 关于条件概率分布 $P(Y|X)$ 的数学期望：
 
-<img src="img/前向后向9.png" width = "500" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向9.png)
 
 其中：
 
-<img src="img/前向后向8.png" width = "150" height = "200" alt="图片名称" align=center />
+![路径](img/前向后向8.png)
 
 ##### 学习问题
 
@@ -404,16 +404,16 @@ $$
    3. 利用 $B_k p_k = -g_k$ 计算 $p_k$；
    4. 一维搜索：求 $\lambda_k$使得
    
-   <img src="img/学习问题1.png" width = "300" height = "200" alt="图片名称" align=center />
+    ![路径](img/学习问题1.png)
    
-   5. 设 $w^{(k+1)} = w^{(k)} + \lambda_k * p_k$
-   6. 计算 $g_{k+1}$ = g(w^{(k+1)}),
+   1. 设 $w^{(k+1)} = w^{(k)} + \lambda_k * p_k$
+   2. 计算 $g_{k+1}$ = g(w^{(k+1)}),
    
        若 $g_k = 0$， 则停止计算；否则，利用下面公式计算 $B_{k+1}$:
        
-       <img src="img/学习问题2.png" width = "300" height = "200" alt="图片名称" align=center />
+       ![路径](img/学习问题2.png)
        
-   7. 令 $k=k+1$，转步骤（3）；
+   3. 令 $k=k+1$，转步骤（3）；
 
 ##### 预测问题
 
@@ -425,19 +425,19 @@ $$
 
 1. 初始化
 
-<img src="img/预测1.png" width = "350" height = "200" alt="图片名称" align=center />
+![路径](img/预测1.png)
   
 2. 递推，对$i=2,3,...,n$
 
-<img src="img/预测2.png" width = "450" height = "200" alt="图片名称" align=center />
+![路径](img/预测2.png)
 
 3. 终止
 
-<img src="img/预测3.png" width = "200" height = "200" alt="图片名称" align=center />
+![路径](img/预测3.png)
 
 4. 返回路径
 
-<img src="img/预测4.png" width = "350" height = "200" alt="图片名称" align=center />
+![路径](img/预测4.png)
 
 求得最优路径 $y^{*}= (y_1^*,y_2^*,...,y_n^*)$
 
@@ -445,25 +445,26 @@ $$
 
 利用维特比算法计算给定输入序列$x$ 对应的最优输出序列$y^*$：
 
-<img src="img/预测5.png" width = "200" height = "200" alt="图片名称" align=center />
+![路径](img/预测5.png)
 
 1. 初始化
 
-<img src="img/预测6.png" width = "350" height = "200" alt="图片名称" align=center />
+![路径](img/预测6.png)
   
 2. 递推，对$i=2,3,...,n$
 
-<img src="img/预测11.png" width = "450" height = "200" alt="图片名称" align=center />
+![路径](img/预测11.png)
 
-<img src="img/预测8.png" width = "500" height = "200" alt="图片名称" align=center />
+![路径](img/预测8.png)
 
 3. 终止
 
-<img src="img/预测9.png" width = "350" height = "200" alt="图片名称" align=center />
+![路径](img/预测9.png)
 
-4. 返回路径
+1. 返回路径
 
-<img src="img/预测10.png" width = "200" height = "200" alt="图片名称" align=center />
+![路径](img/预测10.png)
+
 
 求得最优路径 $y^{*}= (y_1^*,y_2^*,...,y_n^*) = (1,2,1)$
 
